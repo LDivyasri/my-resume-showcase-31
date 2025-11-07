@@ -71,10 +71,12 @@ const Header = () => {
               variant="default"
               size="sm"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => window.open("/resume.pdf", "_blank")}
+              asChild
             >
-              <FileText className="mr-2 h-4 w-4" />
-              Resume
+              <a href="/resume.pdf" download="Divya_Sri_Resume.pdf">
+                <FileText className="mr-2 h-4 w-4" />
+                Resume
+              </a>
             </Button>
           </div>
 
@@ -115,10 +117,12 @@ const Header = () => {
             <Button
               variant="default"
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-3"
-              onClick={() => window.open("/resume.pdf", "_blank")}
+              asChild
             >
-              <FileText className="mr-2 h-4 w-4" />
-              Resume
+              <a href="/resume.pdf" download="Divya_Sri_Resume.pdf">
+                <FileText className="mr-2 h-4 w-4" />
+                Resume
+              </a>
             </Button>
           </div>
         )}

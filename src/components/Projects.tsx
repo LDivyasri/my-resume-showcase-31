@@ -13,7 +13,8 @@ const Projects = () => {
         "Admin approval workflow",
         "Donation management system",
         "Mentorship platform"
-      ]
+      ],
+      githubLink: "https://github.com/yourusername/alumni-portal"
     },
     {
       title: "Medicine Resale Portal",
@@ -24,7 +25,8 @@ const Projects = () => {
         "Secure transaction system",
         "Real-time inventory management",
         "User-pharmacy marketplace"
-      ]
+      ],
+      githubLink: "https://github.com/yourusername/medicine-resale"
     }
   ];
 
@@ -52,7 +54,15 @@ const Projects = () => {
                       {project.description}
                     </CardDescription>
                   </div>
-                  <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  <a 
+                    href={project.githubLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:scale-110 transition-transform"
+                    aria-label={`View ${project.title} on GitHub`}
+                  >
+                    <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </a>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">

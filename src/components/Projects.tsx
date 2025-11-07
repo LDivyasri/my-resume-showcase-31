@@ -14,7 +14,7 @@ const Projects = () => {
         "Donation management system",
         "Mentorship platform"
       ],
-      githubLink: "https://github.com/yourusername/alumni-portal"
+      githubLink: "https://github.com/LDivyasri/alumni-portal.git"
     },
     {
       title: "Medicine Resale Portal",

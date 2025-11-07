@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
@@ -9,13 +10,28 @@ import Contact from "@/components/Contact";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Certifications />
-      <Contact />
+      <Header />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="experience">
+        <Experience />
+      </section>
+      <section id="certifications">
+        <Certifications />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
       
       <footer className="py-8 text-center text-muted-foreground border-t border-border">
         <p className="text-sm">

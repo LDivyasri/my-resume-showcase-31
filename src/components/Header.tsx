@@ -73,7 +73,7 @@ const Header = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
               asChild
             >
-              <a href="/resume.pdf" download="Divya_Sri_Resume.pdf">
+              <a href="Divya_Sri_Resume.pdf">
                 <FileText className="mr-2 h-4 w-4" />
                 Resume
               </a>
@@ -119,7 +119,7 @@ const Header = () => {
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-3"
               asChild
             >
-              <a href="/resume.pdf" download="Divya_Sri_Resume.pdf">
+              <a href="Divya_Sri_Resume.pdf">
                 <FileText className="mr-2 h-4 w-4" />
                 Resume
               </a>

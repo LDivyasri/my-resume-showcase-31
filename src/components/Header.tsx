@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -50,22 +50,33 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }}
-                  className="text-foreground/80 hover:text-primary transition-colors font-medium"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center gap-6">
+            <ul className="flex items-center gap-8">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }}
+                    className="text-foreground/80 hover:text-primary transition-colors font-medium"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <Button
+              variant="default"
+              size="sm"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              onClick={() => window.open("/resume.pdf", "_blank")}
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              Resume
+            </Button>
+          </div>
 
           {/* Mobile Menu Button */}
           <Button
@@ -84,22 +95,32 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <ul className="md:hidden mt-4 space-y-3 glass-card p-4 rounded-lg">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }}
-                  className="block text-foreground/80 hover:text-primary transition-colors font-medium py-2"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="md:hidden mt-4 space-y-3 glass-card p-4 rounded-lg">
+            <ul className="space-y-3">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }}
+                    className="block text-foreground/80 hover:text-primary transition-colors font-medium py-2"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <Button
+              variant="default"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-3"
+              onClick={() => window.open("/resume.pdf", "_blank")}
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              Resume
+            </Button>
+          </div>
         )}
       </nav>
     </header>

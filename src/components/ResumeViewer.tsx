@@ -31,16 +31,23 @@ const ResumeViewer = ({ variant = "default", size = "sm", className = "", fullWi
       </Button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-4xl h-[90vh]">
+        <DialogContent className="max-w-4xl h-[90vh] flex flex-col">
           <DialogHeader>
             <DialogTitle>Resume</DialogTitle>
           </DialogHeader>
-          <div className="flex-1 overflow-hidden h-full">
-            <iframe
-              src="/resume.pdf"
+          <div className="flex-1 overflow-hidden">
+            <object
+              data="/resume.pdf"
+              type="application/pdf"
               className="w-full h-full rounded-md"
-              title="Resume PDF"
-            />
+              aria-label="Resume PDF"
+            >
+              <embed
+                src="/resume.pdf"
+                type="application/pdf"
+                className="w-full h-full rounded-md"
+              />
+            </object>
           </div>
         </DialogContent>
       </Dialog>

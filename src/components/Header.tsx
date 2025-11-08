@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, FileText } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ResumeViewer from "./ResumeViewer";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,17 +68,11 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <Button
-              variant="default"
+            <ResumeViewer 
+              variant="default" 
               size="sm"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              asChild
-            >
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                <FileText className="mr-2 h-4 w-4" />
-                Resume
-              </a>
-            </Button>
+            />
           </div>
 
           {/* Mobile Menu Button */}
@@ -114,16 +109,11 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <Button
+            <ResumeViewer 
               variant="default"
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-3"
-              asChild
-            >
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                <FileText className="mr-2 h-4 w-4" />
-                Resume
-              </a>
-            </Button>
+              className="bg-primary hover:bg-primary/90 text-primary-foreground mt-3"
+              fullWidth
+            />
           </div>
         )}
       </nav>

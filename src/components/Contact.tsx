@@ -28,7 +28,7 @@ const Contact = () => {
     {
       icon: <Github className="h-6 w-6" />,
       label: "GitHub",
-      href: "https://github.com/DivyaSriL",
+      href: "https://github.com/LDivyasri",
       color: "hover:text-primary"
     },
     {

@@ -34,7 +34,7 @@ const Contact = () => {
     {
       icon: <Linkedin className="h-6 w-6" />,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/divya-sri-99a12aa7",
+      href: "https://www.linkedin.com/in/divya-sri-99a1a22a7",
       color: "hover:text-primary"
     },
     {

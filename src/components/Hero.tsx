@@ -51,7 +51,7 @@ const Hero = () => {
                className="text-muted-foreground hover:text-primary transition-colors">
               <Github className="h-6 w-6" />
             </a>
-            <a href="https://linkedin.com/in/divya-sri-99a12aa7" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/divya-sri-99a1a22a7" target="_blank" rel="noopener noreferrer"
                className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin className="h-6 w-6" />
             </a>
